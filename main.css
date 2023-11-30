@@ -12,35 +12,24 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    gap: 20px;
+    max-width: 400px;
+    margin: 20px auto;
   }
   
   .button {
-    width: 1000%;
-    height: 1000%;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
-    border: 5px solid #333;
-    border-radius: 50%;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
   }
   
-  #top-left {
-    background-image: url('images/topLeft.png');
-    background-size: auto;
-  }
-  
-  #top-right {
-    background-image: url('images/topRight.png');
-    background-size: auto;
-  }
-  
-  #bottom-left {
-    background-image: url('images/bottomLeft.png');
-    background-size: auto;
-  }
-  
-  #bottom-right {
-    background-image: url('images/bottomRight.png');
-    background-size: auto;
+  .button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Border radius for rounded corners, adjust as needed */
   }
   
   h1, p {
@@ -48,8 +37,8 @@ body {
   }
   
   #start-btn {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 18px;
     cursor: pointer;
     margin-top: 20px;
   }
