@@ -16,31 +16,31 @@ body {
   }
   
   .button {
-    width: 100%;
-    height: 100%;
+    width: 1000%;
+    height: 1000%;
     cursor: pointer;
     border: 5px solid #333;
-    border-radius: 15px;
+    border-radius: 50%;
   }
   
   #top-left {
     background-image: url('images/topLeft.png');
-    background-size: 1000%;
+    background-size: auto;
   }
   
   #top-right {
     background-image: url('images/topRight.png');
-    background-size: 1000%;
+    background-size: auto;
   }
   
   #bottom-left {
     background-image: url('images/bottomLeft.png');
-    background-size: 1000%;
+    background-size: auto;
   }
   
   #bottom-right {
     background-image: url('images/bottomRight.png');
-    background-size: 1000%;
+    background-size: auto;
   }
   
   h1, p {
