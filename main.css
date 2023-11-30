@@ -25,22 +25,22 @@ body {
   
   #top-left {
     background-image: url('images/topLeft.png');
-    background-size: cover;
+    background-size: 1000%;
   }
   
   #top-right {
     background-image: url('images/topRight.png');
-    background-size: cover;
+    background-size: 1000%;
   }
   
   #bottom-left {
     background-image: url('images/bottomLeft.png');
-    background-size: cover;
+    background-size: 1000%;
   }
   
   #bottom-right {
     background-image: url('images/bottomRight.png');
-    background-size: cover;
+    background-size: 1000%;
   }
   
   h1, p {
