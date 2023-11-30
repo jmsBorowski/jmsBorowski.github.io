@@ -41,13 +41,16 @@ document.querySelectorAll(".button").forEach(function (button) {
 });
 
 function flashButton(color) {
-    const button = document.getElementById(color);
+    const button = document.querySelector(color);
     button.style.backgroundColor = color;
     playSound(color);
     setTimeout(() => {
-      button.style.backgroundColor = ''; // Reset to the original background color
+      button.style.backgroundColor = '';
     }, 300);
   }
+  
+  
+  
   
   function animatePress(currentColor) {
     const button = document.getElementById(currentColor);
