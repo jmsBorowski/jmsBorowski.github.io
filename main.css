@@ -24,22 +24,22 @@ body {
   }
   
   #top-left {
-    background-image: url('topLeft.png');
+    background-image: url('images\topLeft.png');
     background-size: cover;
   }
   
   #top-right {
-    background-image: url('topRight.png');
+    background-image: url('images\topRight.png');
     background-size: cover;
   }
   
   #bottom-left {
-    background-image: url('bottomLeft.png');
+    background-image: url('images\bottomLeft.png');
     background-size: cover;
   }
   
   #bottom-right {
-    background-image: url('bottomRight.png');
+    background-image: url('images\bottomRight.png');
     background-size: cover;
   }
   
