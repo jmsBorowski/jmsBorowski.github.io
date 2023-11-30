@@ -23,7 +23,7 @@ function nextSequence() {
   level++;
   updateLevelTitle("Level " + level);
 
-  const randomNumber = Math.floor(Math.random() * 4);
+  const randomNumber = Math.floor(Math.random() * 4); 
   const randomChosenColor = buttonColors[randomNumber];
   gamePattern.push(randomChosenColor);
 
@@ -41,26 +41,22 @@ document.querySelectorAll(".button").forEach(function (button) {
 });
 
 function flashButton(color) {
-  const button = document.querySelector(color);
-  button.classList.add("flash");
-  playSound(color);
-  setTimeout(() => {
-    button.classList.remove("flash");
-  }, 300);
-}
-
-function playSound(name) {
-  const audio = new Audio("sounds/" + name + ".mp3");
-  audio.play();
-}
-
-function animatePress(currentColor) {
-  const button = document.getElementById(currentColor);
-  button.classList.add("pressed");
-  setTimeout(() => {
-    button.classList.remove("pressed");
-  }, 100);
-}
+    const button = document.getElementById(color);
+    button.style.backgroundColor = color;
+    playSound(color);
+    setTimeout(() => {
+      button.style.backgroundColor = ''; // Reset to the original background color
+    }, 300);
+  }
+  
+  function animatePress(currentColor) {
+    const button = document.getElementById(currentColor);
+    button.style.backgroundColor = currentColor;
+    setTimeout(() => {
+      button.style.backgroundColor = ''; // Reset to the original background color
+    }, 100);
+  }
+  
 
 function checkAnswer(currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {

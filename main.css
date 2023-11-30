@@ -42,4 +42,13 @@ body {
     cursor: pointer;
     margin-top: 20px;
   }
+
+  .pressed {
+    opacity: 0.5; /* Adjust opacity as needed */
+  }
+  
+  .flash {
+    box-shadow: 0 0 10px 5px white; /* Example of a flashing effect; adjust as needed */
+  }
+  
   
