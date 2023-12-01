@@ -33,15 +33,15 @@ function nextSequence() {
 }
 
 document.querySelectorAll(".button").forEach(function (button) {
-    if(gameStarted) {
         button.addEventListener("click", function () {
             const userChosenColor = this.id;
-            userClickedPattern.push(userChosenColor);
-            playSound(userChosenColor);
-            animatePress(userChosenColor);
-            checkAnswer(userClickedPattern.length - 1);
+            if(gameStarted) {
+                userClickedPattern.push(userChosenColor);
+                playSound(userChosenColor);
+                animatePress(userChosenColor);
+                checkAnswer(userClickedPattern.length - 1);
+            }
         });
-    } 
 });
 
 function flashButton(color) {
