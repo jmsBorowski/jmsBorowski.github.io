@@ -23,18 +23,20 @@ function nextSequence() {
   level++;
   updateLevelTitle("Level " + level);
 
-  const randomNumber = Math.floor(Math.random() * 4); // random number 0-4 inclusive 
-  const randomChosenColor = buttonColors[randomNumber]; // random color from buttonColors 
-  gamePattern.push(randomChosenColor);
+  for (let i = 0; i < level; i++) {
+    const randomNumber = Math.floor(Math.random() * 4); // random number 0-4 inclusive 
+    const randomChosenColor = buttonColors[randomNumber]; // random color from buttonColors 
+    gamePattern.push(randomChosenColor);
 
-  flashButton(randomChosenColor); 
+    flashButton(randomChosenColor); 
+  }
 }
 
 document.querySelectorAll(".button").forEach(function (button) {
   button.addEventListener("click", function () {
     const userChosenColor = this.id;
     userClickedPattern.push(userChosenColor);
-    playSound(userChosenColor);
+    playSound("#"+userChosenColor);
     animatePress(userChosenColor);
     checkAnswer(userClickedPattern.length - 1);
   });
@@ -51,9 +53,9 @@ function flashButton(color) {
   
   function animatePress(currentColor) {
     const button = document.getElementById(currentColor);
-    button.style.backgroundColor = currentColor;
+    button.classList.add("pressed");
     setTimeout(() => {
-      button.style.backgroundColor = ''; // Reset to the original background color
+      button.classList.remove("pressed");
     }, 100);
   }
   

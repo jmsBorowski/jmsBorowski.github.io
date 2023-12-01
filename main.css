@@ -29,7 +29,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px; /* Border radius for rounded corners, adjust as needed */
+    border-radius: 20px; 
   }
   
   h1, p {
@@ -43,8 +43,9 @@ body {
     margin-top: 20px;
   }
 
-  .pressed {
-    opacity: 0.5; /* Adjust opacity as needed */
+
+.button.pressed img {
+    background-color: #CCCCCC; /* Adjust the color as needed */
   }
   
   .flash {
