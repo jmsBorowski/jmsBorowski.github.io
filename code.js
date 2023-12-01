@@ -70,12 +70,8 @@ function checkAnswer(currentLevel) {
     }
   } else {
     playSound("wrong");
-    document.body.classList.add("game-over");
-    setTimeout(() => {
-      document.body.classList.remove("game-over");
-    }, 200);
     updateLevelTitle("Game Over, Press Start to Restart");
-    startGame();
+    gameStarted = false; 
   }
 }
 
