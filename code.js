@@ -1,4 +1,4 @@
-const buttonColors = ["#green", "#grey", "#orange", "#pink"];
+const buttonColors = ["green", "grey", "orange", "pink"];
 let gamePattern = [];
 let userClickedPattern = [];
 let level = 0;
@@ -36,7 +36,7 @@ document.querySelectorAll(".button").forEach(function (button) {
   button.addEventListener("click", function () {
     const userChosenColor = this.id;
     userClickedPattern.push(userChosenColor);
-    playSound("#"+userChosenColor);
+    playSound(userChosenColor);
     animatePress(userChosenColor);
     checkAnswer(userClickedPattern.length - 1);
   });
