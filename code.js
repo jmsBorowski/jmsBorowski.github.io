@@ -45,6 +45,7 @@ document.querySelectorAll(".button").forEach(function (button) {
 }); 
 
 function flashButton(color) {
+    console.log(color); 
     const button = document.getElementById(color); // Use getElementById for IDs
     button.style.backgroundColor = color;
     playSound(color);
