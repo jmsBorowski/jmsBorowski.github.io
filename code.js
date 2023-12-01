@@ -51,13 +51,18 @@ document.querySelectorAll(".button").forEach(function (button) {
 }); 
 
 function flashButton(color) {
-    console.log(color); 
-    const button = document.getElementById(color); // Use getElementById for IDs
-    button.style.backgroundColor = color;
-    playSound(color);
-    setTimeout(() => {
-        button.style.backgroundColor = '';
-    }, 300);
+    const button = document.getElementById(color);
+
+    if (button) {
+        console.log(`Button with ID '${color}' found.`);
+        button.style.backgroundColor = color;
+        playSound(color);
+        setTimeout(() => {
+            button.style.backgroundColor = '';
+        }, 300);
+    } else {
+        console.error(`Element with ID '${color}' not found.`);
+    }
 }
 
   
