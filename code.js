@@ -56,11 +56,18 @@ function flashButton(color) {
     if (button) {
         console.log(`Button with ID '${color}' found.`);
         //button.style.backgroundColor = color;
-        button.style.filter = 'hue-rotate(${color})';
+        
+        const tintColor = "rgba(255, 0, 0, 0.5)";
+
+        button.style.position = "relative";
+        button.style.zIndex = "1"; // Ensure the overlay is above the image
+        button.style.background = tintColor;
+        button.style.mixBlendMode = "multiply";
+
         playSound(color);
         setTimeout(() => {
             //button.style.backgroundColor = '';
-            button.style.filter = 'none';
+            button.style.background = 'none';
         }, 300);
     } else {
         console.error(`Element with ID '${color}' not found.`);
