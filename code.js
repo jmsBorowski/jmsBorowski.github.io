@@ -19,18 +19,18 @@ function startGame() {
 }
 
 function nextSequence() {
-  userClickedPattern = [];
-  level++;
-  updateLevelTitle("Level " + level);
-
-  for (let i = 0; i < level; i++) {
-    const randomNumber = Math.floor(Math.random() * 4); // random number 0-4 inclusive 
-    const randomChosenColor = buttonColors[randomNumber]; // random color from buttonColors 
-    gamePattern.push(randomChosenColor);
-
-    flashButton(randomChosenColor); 
+    userClickedPattern = [];
+    level++;
+    updateLevelTitle("Level " + level);
+  
+    // Iterate over the gamePattern array with a delay between each flash
+    for (let i = 0; i < level; i++) {
+      const currentColor = gamePattern[i];
+      setTimeout(() => {
+        flashButton(currentColor);
+      }, i * 1000); // Adjust the delay (1000 milliseconds = 1 second)
+    }
   }
-}
 
 document.querySelectorAll(".button").forEach(function (button) {
         button.addEventListener("click", function () {
@@ -42,7 +42,7 @@ document.querySelectorAll(".button").forEach(function (button) {
                 checkAnswer(userClickedPattern.length - 1);
             }
         });
-});
+}); 
 
 function flashButton(color) {
     const button = document.getElementById(color); // Use getElementById for IDs
