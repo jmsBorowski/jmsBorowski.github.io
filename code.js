@@ -55,11 +55,18 @@ function flashButton(color) {
 
     if (button) {
         console.log(`Button with ID '${color}' found.`);
-        button.style.backgroundColor = color;
+        //button.style.backgroundColor = color;
+
+        const originalImage = button.src; 
+
+        if (color == "orange") {
+            button.src = 'images/fish2.png'; 
+        }
 
         playSound(color);
         setTimeout(() => {
-            button.style.backgroundColor = '';
+            //button.style.backgroundColor = '';
+            button.src = originalImage; 
         }, 300);
     } else {
         console.error(`Element with ID '${color}' not found.`);
