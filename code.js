@@ -23,11 +23,11 @@ function nextSequence() {
   level++;
   updateLevelTitle("Level " + level);
 
-  const randomNumber = Math.floor(Math.random() * 4); 
-  const randomChosenColor = buttonColors[randomNumber];
+  const randomNumber = Math.floor(Math.random() * 4); // random number 0-4 inclusive 
+  const randomChosenColor = buttonColors[randomNumber]; // random color from buttonColors 
   gamePattern.push(randomChosenColor);
 
-  flashButton(randomChosenColor);
+  flashButton(randomChosenColor); 
 }
 
 document.querySelectorAll(".button").forEach(function (button) {
@@ -48,9 +48,6 @@ function flashButton(color) {
       button.style.backgroundColor = '';
     }, 300);
   }
-  
-  
-  
   
   function animatePress(currentColor) {
     const button = document.getElementById(currentColor);
