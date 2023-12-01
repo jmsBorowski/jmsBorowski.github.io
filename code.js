@@ -55,14 +55,16 @@ function flashButton(color) {
 
     if (button) {
         console.log(`Button with ID '${color}' found.`);
-        button.style.backgroundColor = color;
+        //button.style.backgroundColor = color;
+        button.style.filter = `brightness(50%) sepia(100%) hue-rotate(${color})`;
         playSound(color);
         setTimeout(() => {
-            button.style.backgroundColor = '';
+            //button.style.backgroundColor = '';
+            button.style.filter = 'none';
         }, 300);
     } else {
         console.error(`Element with ID '${color}' not found.`);
-    }
+    } 
 }   
 
 function checkAnswer(currentLevel) {
