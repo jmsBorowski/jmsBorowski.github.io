@@ -44,7 +44,7 @@ document.querySelectorAll(".button").forEach(function (button) {
             if(gameStarted) {
                 userClickedPattern.push(userChosenColor);
                 playSound(userChosenColor);
-                animatePress(userChosenColor);
+                flashButton(userChosenColor);
                 checkAnswer(userClickedPattern.length - 1);
             }
         });
@@ -63,17 +63,7 @@ function flashButton(color) {
     } else {
         console.error(`Element with ID '${color}' not found.`);
     }
-}
-
-  
-  function animatePress(currentColor) {
-    const button = document.getElementById(currentColor);
-    button.classList.add("pressed");
-    setTimeout(() => {
-      button.classList.remove("pressed");
-    }, 100);
-  }
-  
+}   
 
 function checkAnswer(currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
