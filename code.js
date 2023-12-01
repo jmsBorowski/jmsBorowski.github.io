@@ -79,3 +79,8 @@ function checkAnswer(currentLevel) {
 function updateLevelTitle(title) {
   document.querySelector("h1").textContent = title;
 }
+
+function playSound(soundFileName) {
+    const audio = new Audio("sounds/" + soundFileName + ".mp3");
+    audio.play();
+  }
