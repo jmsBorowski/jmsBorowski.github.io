@@ -30,7 +30,6 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 20px; 
-    filter: hue-rotate(90deg);
   }
   
   h1, p {
