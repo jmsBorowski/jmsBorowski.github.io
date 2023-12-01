@@ -64,7 +64,7 @@ function flashButton(color) {
         } else if (color == "green") {
             button.src = 'images/grass2.png'; 
         } else if (color == "grey") {
-            button.src = 'images/grey2.png'; 
+            button.src = 'images/rocks2.png'; 
         } 
 
         playSound(color);
