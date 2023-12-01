@@ -61,7 +61,9 @@ function flashButton(color) {
 
         if (color == "orange") {
             button.src = 'images/fish2.png'; 
-        }
+        } else if (color == "green") {
+            button.src = 'images/grass2.png'; 
+        } 
 
         playSound(color);
         setTimeout(() => {
