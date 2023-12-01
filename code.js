@@ -56,7 +56,7 @@ function flashButton(color) {
     if (button) {
         console.log(`Button with ID '${color}' found.`);
         //button.style.backgroundColor = color;
-        button.style.filter = `brightness(50%) sepia(100%) hue-rotate(${color})`;
+        button.style.filter = hue-rotate(25);
         playSound(color);
         setTimeout(() => {
             //button.style.backgroundColor = '';
