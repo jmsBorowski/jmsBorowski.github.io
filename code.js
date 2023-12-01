@@ -55,19 +55,11 @@ function flashButton(color) {
 
     if (button) {
         console.log(`Button with ID '${color}' found.`);
-        //button.style.backgroundColor = color;
-        
-        const tintColor = "rgba(255, 0, 0, 0.5)";
-
-        button.style.position = "relative";
-        button.style.zIndex = "1"; // Ensure the overlay is above the image
-        button.style.background = tintColor;
-        button.style.mixBlendMode = "multiply";
+        button.style.backgroundColor = color;
 
         playSound(color);
         setTimeout(() => {
-            //button.style.backgroundColor = '';
-            button.style.background = 'none';
+            button.style.backgroundColor = '';
         }, 300);
     } else {
         console.error(`Element with ID '${color}' not found.`);
