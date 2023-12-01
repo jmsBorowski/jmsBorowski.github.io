@@ -1,4 +1,4 @@
-const buttonColors = ["#green", "#red", "#yellow", "#blue"];
+const buttonColors = ["#green", "#grey", "#orange", "#pink"];
 let gamePattern = [];
 let userClickedPattern = [];
 let level = 0;
