@@ -60,7 +60,7 @@ function nextSequence() {
       //playSound(currentColor);
       setTimeout(() => {
         flashButton(currentColor);
-      }, i * 1000); 
+      }, i * 2000); 
     }
 
     setTimeout(() => {
@@ -103,7 +103,7 @@ function flashButton(color) {
         setTimeout(() => {
             //button.style.backgroundColor = '';
             button.src = originalImage; 
-        }, 1500);
+        }, 1500); 
     } else {
         console.error(`Element with ID '${color}' not found.`);
     } 
@@ -112,7 +112,9 @@ function flashButton(color) {
 function checkAnswer(currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
     if (userClickedPattern.length === gamePattern.length) {
-      setTimeout(() => {
+        setTimeout(() => {
+        }, 1000); 
+        setTimeout(() => {
         nextSequence();
       }, 2000);
     }
