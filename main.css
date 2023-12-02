@@ -41,14 +41,22 @@ body {
   p {
     margin-top: 20px;
   }
-  
-  #start-btn {
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 20px;
-    font-family: 'Macondo', cursive;
-  }
+
+#start-btn,
+#restart-btn {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Adjust the height as needed */
+  padding: 15px 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Macondo', cursive;
+}
+
+#start-btn:hover,
+#restart-btn:hover {
+    transform: scale(1.1);
+}
+
 
 
 .button.pressed img {
