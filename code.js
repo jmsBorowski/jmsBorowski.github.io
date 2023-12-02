@@ -3,6 +3,7 @@ let gamePattern = [];
 let userClickedPattern = [];
 let level = 0;
 let gameStarted = false;
+let userTurn = false; 
 
 document.getElementById("start-btn").addEventListener("click", function () {
   if (!gameStarted) {
@@ -20,6 +21,7 @@ function startGame() {
 
 function nextSequence() {
     userClickedPattern = [];
+    userTurn = false; 
     level++;
     updateLevelTitle("Level " + level);
     
@@ -36,12 +38,13 @@ function nextSequence() {
         flashButton(currentColor);
       }, i * 1000); // Adjust the delay (1000 milliseconds = 1 second)
     }
+    userTurn = true; 
   }
 
 document.querySelectorAll(".button").forEach(function (button) {
         button.addEventListener("click", function () {
             const userChosenColor = this.id;
-            if(gameStarted) {
+            if(gameStarted && userTurn) {
                 userClickedPattern.push(userChosenColor);
                 playSound(userChosenColor);
                 flashButton(userChosenColor);
