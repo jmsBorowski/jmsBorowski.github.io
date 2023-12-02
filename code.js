@@ -87,7 +87,7 @@ function flashButton(color) {
         console.log(`Button with ID '${color}' found.`);
         //button.style.backgroundColor = color;
 
-        const originalImage = button.src; 
+        let originalImage = button.src; 
 
         if (color == "orange") {
             button.src = 'images/fish2.png'; 
