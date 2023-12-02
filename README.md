@@ -13,7 +13,7 @@ All art created and designed by Jaiden Borowski
 
 Sounds from pixabay (creative commons): 
 
-Background Gong: https://pixabay.com/sound-effects/singing-bowl-deep-sound-27532/ 
+Background Music: https://pixabay.com/music/ambient-fall-asleep-like-a-baby-relax-music-blubon-relaxon-9643/ 
 
 Cherry Blossom Sound Effect: https://pixabay.com/sound-effects/rustling-leaves-6875/ 
 
