@@ -13,7 +13,9 @@ let commentsArr = [
     "what are you thankful for today?", 
     "quiet the mind and the soul will speak", 
     "meditate. slow down. there is no rush.", 
-    "create your own kind of happy"
+    "create your own kind of happy", 
+    "it's a good day to be happy", 
+    "enjoy the little things"
     ]; 
 
 let audioOn = false; 
@@ -62,6 +64,10 @@ function nextSequence() {
     level++;
     updateLevelTitle("Level " + level);
     
+    if (level >= 2) {
+        document.querySelector("p").textContent = commentsArr[Math.floor(Math.random() * commentsArr.length)];
+    }
+
     // add color to game sequence 
     const randomNumber = Math.floor(Math.random() * 4); // random num 0-3 inclusive 
     const randomChosenColor = buttonColors[randomNumber];
@@ -73,8 +79,7 @@ function nextSequence() {
       //playSound(currentColor);
       setTimeout(() => {
         flashButton(currentColor);
-      }, i * 2000); 
-      document.querySelector("p").textContent = Math.floor(Math.random() * commentsArr.length); 
+      }, i * 2000);  
     }
 
     setTimeout(() => {
