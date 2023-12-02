@@ -7,19 +7,23 @@ let userTurn = false;
 
 let audioOn = false; 
 const audio = document.querySelector("audio");
+const backgroundMusic = new Audio("sounds/backgroundMusic.mp3"); 
 
 document.getElementById("audio-btn").addEventListener("click", function () {
     const audioButton = document.getElementById("audio-btn");
     
     if (audioOn == false) { // audio Off 
         audio.volume = 0; 
+        backgroundMusic.volume = 0; 
         audio.play();
+        backgroundMusic.play(); 
         audioOn = true; 
             
         audioButton.src = 'images/audioOff.png'; 
         
       } else { // audio On 
         audio.volume = 1; 
+        backgroundMusic.volume = 1; 
         audioOn = false; 
 
         audioButton.src = 'images/audioOn.png'; 
@@ -123,5 +127,6 @@ function updateLevelTitle(title) {
 
 function playSound(soundFileName) {
     const audioSound = new Audio("sounds/" + soundFileName + ".mp3");
+    audioSound.volume = audioOn ? 1 : 0; 
     audioSound.play();
 }
