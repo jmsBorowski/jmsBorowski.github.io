@@ -13,7 +13,6 @@ document.getElementById("audio-btn").addEventListener("click", function () {
     const audioButton = document.getElementById("audio-btn");
     
     if (audioOn == false) { // if audio is Off, turn audio on 
-        audio.volume = 1; 
         backgroundMusic.volume = 1; 
         backgroundMusic.play(); 
         audioOn = true; 
@@ -29,7 +28,7 @@ document.getElementById("audio-btn").addEventListener("click", function () {
       }
 });
 
-document.getElementById("audio-btn").addEventListener("click", function () {
+document.getElementById("start-btn").addEventListener("click", function () {
     if (!gameStarted) {
       startGame();
     }
