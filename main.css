@@ -97,19 +97,18 @@ body {
   #panel {
     display: none;
     position: fixed;
-    top: 100%;
-    left: 100%;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
     background-image: url('images/panel.png');
     background-size: cover;
     background-position: center; 
     z-index: 2; /* Ensure it's above the overlay */
+    width: 200px; 
+    height: 300px; 
   }
 
   #panel-content {
-    /*position: absolute;*/ 
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
     text-align: center;
     color: white; /* Adjust text color */
   }
