@@ -95,7 +95,7 @@ body {
   }
   
   #panel {
-    /*display: none;*/ 
+    display: none;
     position: fixed;
     top: 100%;
     left: 100%;
