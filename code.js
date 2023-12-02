@@ -58,7 +58,9 @@ function nextSequence() {
     for (let i = 0; i < gamePattern.length; i++) {
       const currentColor = gamePattern[i];
       //playSound(currentColor);
-      flashButton(currentColor);
+      setTimeout(() => {
+        flashButton(currentColor);
+      }, 1000); 
     }
     userTurn = true; 
   }
