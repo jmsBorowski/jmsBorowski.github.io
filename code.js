@@ -6,7 +6,7 @@ let gameStarted = false;
 let userTurn = false; 
 
 let audioOn = false; 
-const audio = document.getElementById("audio-btn");
+const audio = document.querySelector("audio");
 
 document.getElementById("audio-btn").addEventListener("click", function () {
     const audioButton = document.getElementById("audio-btn");
@@ -122,6 +122,6 @@ function updateLevelTitle(title) {
 }
 
 function playSound(soundFileName) {
-    const audio = new Audio("sounds/" + soundFileName + ".mp3");
-    audio.play();
-  }
+    const audioSound = new Audio("sounds/" + soundFileName + ".mp3");
+    audioSound.play();
+}
