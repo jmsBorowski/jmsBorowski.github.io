@@ -16,7 +16,7 @@ document.getElementById("audio-btn").addEventListener("click", function () {
         audio.play();
         audioOn = true; 
             
-        audioButton.src = 'images/audioOn.png'; 
+        audioButton.src = 'images/audioOff.png'; 
         
       } else { // audio On 
         audio.pause();
