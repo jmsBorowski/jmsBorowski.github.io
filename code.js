@@ -148,9 +148,9 @@ document.getElementById("info-btn").addEventListener("click", function () {
     pauseGame();
 
     // Show overlay and panel
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("popUp").style.display = "block";
-    document.getElementById("panel-content").style.display = "block";
+    document.getElementById("overlay").style.visibility = "visible";
+    document.getElementById("popUp").style.visibility = "visible";
+    document.getElementById("panel-content").style.visibility = "visible";
   }
 });
 
@@ -161,9 +161,9 @@ document.getElementById("close-btn").addEventListener("click", function () {
     resumeGame();
 
     // Hide overlay and panel
-    document.getElementById("overlay").style.display = "none";
-    document.getElementById("popUp").style.display = "none";
-    document.getElementById("panel-content").style.display = "none";
+    document.getElementById("overlay").style.visibility = "hidden";
+    document.getElementById("popUp").style.visibility = "hidden";
+    document.getElementById("panel-content").style.visibility = "hidden";
   }
 });
 
