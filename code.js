@@ -100,7 +100,7 @@ function startGame() {
   let startButton = document.getElementById("start-btn");
   startButton.src = "images/restart.png"; 
 
-  document.querySelector("p").textContent = "see how long you can copy the highlighted pattern";
+  document.querySelector("p").textContent = "when the tiles are done flashing, copy the pattern to proceed to the next level";
   nextSequence();
   
 }
