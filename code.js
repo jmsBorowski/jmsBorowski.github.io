@@ -28,7 +28,7 @@ document.getElementById("audio-btn").addEventListener("click", function () {
     const audioButton = document.getElementById("audio-btn");
     
     if (audioOn == false) { // if audio is Off, turn audio on 
-        backgroundMusic.volume = 1; 
+        backgroundMusic.volume = .9; 
         backgroundMusic.play(); 
         audioOn = true; 
             
@@ -120,6 +120,7 @@ function nextSequence() {
     const randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
 
+    document.getElementById("overlay").style.visibility = "visible";
     // Iterate over the gamePattern array with a delay between each flash
     for (let i = 0; i < gamePattern.length; i++) {
       if(gameStarted) {
@@ -131,6 +132,7 @@ function nextSequence() {
     }
 
     setTimeout(() => {
+        document.getElementById("overlay").style.visibility = "hidden";
         userTurn = true; 
     }, 1500); 
   }
