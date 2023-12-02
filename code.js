@@ -60,7 +60,7 @@ function nextSequence() {
       playSound(currentColor);
       setTimeout(() => {
         flashButton(currentColor);
-      }, i * 1000); // Adjust the delay (1000 milliseconds = 1 second)
+      }, i * 2000); // Adjust the delay (1000 milliseconds = 1 second)
     }
     userTurn = true; 
   }
