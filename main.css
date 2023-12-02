@@ -37,6 +37,10 @@ body {
   h1, p {
     text-align: center;
   }
+
+  p {
+    margin-top: 20px;
+  }
   
   #start-btn {
     padding: 15px 30px;
