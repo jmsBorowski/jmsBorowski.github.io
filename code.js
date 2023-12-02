@@ -40,7 +40,7 @@ function startGame() {
   gamePattern = [];
   userClickedPattern = [];
   level = 0;
-  document.querySelector("p").textContent = "See how long you can follow the highlighted pattern";
+  document.querySelector("p").textContent = "see how long you can copy the highlighted pattern";
   nextSequence();
   
 }
@@ -129,7 +129,7 @@ function checkAnswer(currentLevel) {
   } else {
     playSound("wrong");
     updateLevelTitle("Game Over");
-    document.querySelector("p").textContent = "Press the Play button to restart the game";
+    document.querySelector("p").textContent = "press the play button to restart the game";
     gameStarted = false; 
   }
 }
