@@ -98,8 +98,8 @@ body {
     display: none;
     position: fixed;
     top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    /*transform: translate(-50%, -50%);*/ 
     background-image: url('images/panel.png');
     background-size: cover;
     background-position: center; 
@@ -111,6 +111,7 @@ body {
   #panel-content {
     text-align: center;
     color: white; /* Adjust text color */
+    display: none; 
   }
   
   #panel button {
