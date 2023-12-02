@@ -5,17 +5,32 @@ let level = 0;
 let gameStarted = false;
 let userTurn = false; 
 
-window.addEventListener("DOMContentLoaded", event => {
-    const audio = document.querySelector("audio");
-    audio.volume = 0.2;
-    audio.play();
-  }); 
+let audioOn = false; 
+const audio = document.querySelector("audio");
 
-document.getElementById("start-btn").addEventListener("click", function () {
-  if (!gameStarted) {
-    startGame();
-  }
+document.getElementById("audio-btn").addEventListener("click", function () {
+    const audioButton = document.getElementById("audio-btn");
+    
+    if (audioOn == false) { // audio Off 
+        audio.volume = 1; 
+        audio.play();
+        audioOn = true; 
+            
+        audioButton.src = 'images/audioOn.png'; 
+        
+      } else { // audio On 
+        audio.pause();
+        audioOn = false; 
+
+        audioButton.src = 'images/audioOn.png'; 
+      }
 });
+
+document.getElementById("audio-btn").addEventListener("click", function () {
+    if (!gameStarted) {
+      startGame();
+    }
+  });
 
 function startGame() {
   gameStarted = true;
