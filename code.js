@@ -62,10 +62,9 @@ function restartGame() {
   const startButton = document.getElementById("start-btn");
 
   document.querySelector("p").textContent = "please wait";
-  
-  gameStarted = true;
 
   setTimeout(() => {
+    gameStarted = true;
     document.querySelector("p").textContent = "game restarted - see how long you can copy the highlighted pattern";
     startButton.src = "images/restart.png"; 
     nextSequence();
@@ -103,11 +102,13 @@ function nextSequence() {
 
     // Iterate over the gamePattern array with a delay between each flash
     for (let i = 0; i < gamePattern.length; i++) {
-      const currentColor = gamePattern[i];
-      //playSound(currentColor);
-      setTimeout(() => {
-        flashButton(currentColor);
-      }, i * 2000);  
+      if(gameStarted) {
+        const currentColor = gamePattern[i];
+        //playSound(currentColor);
+        setTimeout(() => {
+            flashButton(currentColor);
+        }, i * 2000);  
+      }  
     }
 
     setTimeout(() => {
