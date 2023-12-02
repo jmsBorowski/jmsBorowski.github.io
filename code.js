@@ -40,7 +40,9 @@ function startGame() {
   gamePattern = [];
   userClickedPattern = [];
   level = 0;
+  document.querySelector("p").textContent = "See how long you can follow the highlighted pattern";
   nextSequence();
+  
 }
 
 function nextSequence() {
@@ -126,7 +128,8 @@ function checkAnswer(currentLevel) {
     }
   } else {
     playSound("wrong");
-    updateLevelTitle("Game Over, Press Start to Restart");
+    updateLevelTitle("Game Over");
+    document.querySelector("p").textContent = "Press the Play button to restart the game";
     gameStarted = false; 
   }
 }
