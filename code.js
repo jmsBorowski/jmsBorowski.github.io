@@ -138,3 +138,29 @@ function playSound(soundFileName) {
     audioSound.volume = audioOn ? 1 : 0; 
     audioSound.play();
 }
+
+let gamePaused = false;
+
+document.getElementById("info-btn").addEventListener("click", function () {
+  if (!gamePaused) {
+    // Pause the game
+    gamePaused = true;
+    pauseGame();
+
+    // Show overlay and panel
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("panel").style.display = "block";
+  }
+});
+
+document.getElementById("close-btn").addEventListener("click", function () {
+  if (gamePaused) {
+    // Resume the game
+    gamePaused = false;
+    resumeGame();
+
+    // Hide overlay and panel
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("panel").style.display = "none";
+  }
+});
