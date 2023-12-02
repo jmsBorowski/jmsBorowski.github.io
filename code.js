@@ -109,11 +109,11 @@ function nextSequence() {
     userClickedPattern = [];
     userTurn = false; 
     level++;
-    updateLevelTitle("Level " + level);
+    updateLevelTitle("Level " + level + " - My Turn");
     
     if (level >= 2) {
         document.querySelector("p").textContent = commentsArr[Math.floor(Math.random() * commentsArr.length)];
-    }
+    } 
 
     // add color to game sequence 
     const randomNumber = Math.floor(Math.random() * 4); // random num 0-3 inclusive 
@@ -130,6 +130,7 @@ function nextSequence() {
             setTimeout(() => {
               if(i == gamePattern.length - 1) {
                 document.getElementById("overlay").style.visibility = "hidden";
+                updateLevelTitle("Level " + level + " - Your Turn!");
               }
             }, 1500); 
         }, i * 2000);  
