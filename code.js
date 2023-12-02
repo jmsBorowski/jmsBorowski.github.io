@@ -124,7 +124,6 @@ function nextSequence() {
     for (let i = 0; i < gamePattern.length; i++) {
       if(gameStarted) {
         const currentColor = gamePattern[i];
-        //playSound(currentColor);
         setTimeout(() => {
             flashButton(currentColor);
         }, i * 2000);  
@@ -142,7 +141,6 @@ document.querySelectorAll(".button").forEach(function (button) {
                 const userChosenColor = this.id;
                 if(gameStarted) {
                     userClickedPattern.push(userChosenColor);
-                    //playSound(userChosenColor);
                     flashButton(userChosenColor);
                     checkAnswer(userClickedPattern.length - 1);
                 } 
@@ -173,7 +171,7 @@ function flashButton(color) {
             originalImage = 'images/petals1.png'; 
         } 
 
-        playSound(color);
+        playSound(color, 1);
         setTimeout(() => {
             //button.style.backgroundColor = '';
             button.src = originalImage; 
@@ -193,7 +191,7 @@ function checkAnswer(currentLevel) {
       }, 2000);
     }
   } else {
-    playSound("wrong");
+    playSound("wrong", 0.7);
     updateLevelTitle("Game Over");
     document.querySelector("p").textContent = "your score was " + level + 
                                               "\ngood job!" + 
@@ -209,9 +207,9 @@ function updateLevelTitle(title) {
   document.querySelector("h1").textContent = title;
 }
 
-function playSound(soundFileName) {
+function playSound(soundFileName, max) {
     const audioSound = new Audio("sounds/" + soundFileName + ".mp3");
-    audioSound.volume = audioOn ? 1 : 0; 
+    audioSound.volume = audioOn ? max : 0; 
     audioSound.play();
 }
 
