@@ -12,20 +12,20 @@ const backgroundMusic = new Audio("sounds/backgroundMusic.mp3");
 document.getElementById("audio-btn").addEventListener("click", function () {
     const audioButton = document.getElementById("audio-btn");
     
-    if (audioOn == false) { // audio Off 
-        audio.volume = 0; 
-        backgroundMusic.volume = 0; 
+    if (audioOn == false) { // if audio is Off, turn audio on 
+        audio.volume = 1; 
+        backgroundMusic.volume = 1; 
         backgroundMusic.play(); 
         audioOn = true; 
             
-        audioButton.src = 'images/audioOff.png'; 
+        audioButton.src = 'images/audioOn.png'; 
         
-      } else { // audio On 
-        audio.volume = 1; 
-        backgroundMusic.volume = 1; 
+      } else { // if audio is On, turn audio off 
+        audio.volume = 0; 
+        backgroundMusic.volume = 0; 
         audioOn = false; 
 
-        audioButton.src = 'images/audioOn.png'; 
+        audioButton.src = 'images/audioOff.png'; 
       }
 });
 
