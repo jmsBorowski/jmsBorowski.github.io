@@ -12,14 +12,13 @@ document.getElementById("audio-btn").addEventListener("click", function () {
     const audioButton = document.getElementById("audio-btn");
     
     if (audioOn == false) { // audio Off 
-        audio.volume = 1; 
-        audio.play();
+        audio.volume = 0; 
         audioOn = true; 
             
         audioButton.src = 'images/audioOff.png'; 
         
       } else { // audio On 
-        audio.pause();
+        audio.volume = 1; 
         audioOn = false; 
 
         audioButton.src = 'images/audioOn.png'; 
