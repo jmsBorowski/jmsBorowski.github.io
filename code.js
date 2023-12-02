@@ -56,6 +56,16 @@ function restartGame() {
   
   clearTimeouts();
 
+  // reset all button images if their timeout was stopped early 
+  let buttonReset = document.getElementById("green");
+  buttonReset.src = 'images/grass1.png'; 
+  buttonReset = document.getElementById("grey");
+  buttonReset.src = 'images/rocks1.png'; 
+  buttonReset = document.getElementById("orange");
+  buttonReset.src = 'images/fish1.png'; 
+  buttonReset = document.getElementById("pink");
+  buttonReset.src = 'images/petals1.png'; 
+  
   gameStarted = false; 
   gamePattern = [];
   userClickedPattern = [];
@@ -70,7 +80,7 @@ function restartGame() {
     document.querySelector("p").textContent = "game restarted - see how long you can copy the highlighted pattern";
     startButton.src = "images/restart.png"; 
     nextSequence();
-  }, 2000);
+  }, 1500);
 }
 
 function clearTimeouts() {
