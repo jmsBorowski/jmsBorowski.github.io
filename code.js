@@ -63,7 +63,10 @@ function restartGame() {
   document.querySelector("p").textContent = "game restarted - see how long you can copy the highlighted pattern";
   
   gameStarted = true;
-  nextSequence();
+
+  setTimeout(() => {
+    nextSequence();
+  }, 2000);
 }
 
 function startGame() {
@@ -174,7 +177,7 @@ function checkAnswer(currentLevel) {
     gameStarted = false; 
 
     let startButtonEnd = document.getElementById("start-btn");
-    startButtonEnd.src = "images/start.png"; 
+    startButtonEnd.src = "images/play.png"; 
   }
 }
 
