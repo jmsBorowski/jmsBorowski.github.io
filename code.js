@@ -46,14 +46,35 @@ document.getElementById("audio-btn").addEventListener("click", function () {
 document.getElementById("start-btn").addEventListener("click", function () {
     if (!gameStarted) {
       startGame();
+    } else {
+        restartGame(); 
     }
   });
+
+function restartGame() {
+  gameStarted = false; 
+  gamePattern = [];
+  userClickedPattern = [];
+  level = 0;
+
+  const startButton = document.getElementById("start-btn");
+  startButton.src = "images/restart.png"; 
+
+  document.querySelector("p").textContent = "game restarted - see how long you can copy the highlighted pattern";
+  
+  gameStarted = true;
+  nextSequence();
+}
 
 function startGame() {
   gameStarted = true;
   gamePattern = [];
   userClickedPattern = [];
   level = 0;
+
+  let startButton = document.getElementById("start-btn");
+  startButton.src = "images/restart.png"; 
+
   document.querySelector("p").textContent = "see how long you can copy the highlighted pattern";
   nextSequence();
   
@@ -151,6 +172,9 @@ function checkAnswer(currentLevel) {
                                               "\ngood job!" + 
                                               "\npress the play button to play again";
     gameStarted = false; 
+
+    let startButtonEnd = document.getElementById("start-btn");
+    startButtonEnd.src = "images/start.png"; 
   }
 }
 
