@@ -100,7 +100,7 @@ function flashButton(color) {
         setTimeout(() => {
             //button.style.backgroundColor = '';
             button.src = originalImage; 
-        }, 1000);
+        }, 3000);
     } else {
         console.error(`Element with ID '${color}' not found.`);
     } 
