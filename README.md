@@ -3,6 +3,7 @@ Go to the following link to experience the game:
 # jmsBorowski.github.io
 
 A relaxing, Simon Says inspired memory game. Simply press play and follow the highlighted pattern, which increases in difficulty every level! 
+This fresh take on a familiar classic adds creativity by including inspiring quotes on every level and creating an overall atmosphere of calm that will keep users playing everyday. 
 
 Credits: 
 
