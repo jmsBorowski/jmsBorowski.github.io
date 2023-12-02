@@ -60,7 +60,7 @@ function nextSequence() {
       playSound(currentColor);
       setTimeout(() => {
         flashButton(currentColor);
-      }, i * 2000); // Adjust the delay (1000 milliseconds = 1 second)
+      }, i * 1000); 
     }
     userTurn = true; 
   }
@@ -100,7 +100,7 @@ function flashButton(color) {
         setTimeout(() => {
             //button.style.backgroundColor = '';
             button.src = originalImage; 
-        }, 300);
+        }, 1000);
     } else {
         console.error(`Element with ID '${color}' not found.`);
     } 
