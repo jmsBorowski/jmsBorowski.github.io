@@ -57,10 +57,8 @@ function nextSequence() {
     // Iterate over the gamePattern array with a delay between each flash
     for (let i = 0; i < gamePattern.length; i++) {
       const currentColor = gamePattern[i];
-      playSound(currentColor);
-      setTimeout(() => {
-        flashButton(currentColor);
-      }, i * 1000); 
+      //playSound(currentColor);
+      flashButton(currentColor);
     }
     userTurn = true; 
   }
@@ -70,7 +68,7 @@ document.querySelectorAll(".button").forEach(function (button) {
             const userChosenColor = this.id;
             if(gameStarted && userTurn) {
                 userClickedPattern.push(userChosenColor);
-                playSound(userChosenColor);
+                //playSound(userChosenColor);
                 flashButton(userChosenColor);
                 checkAnswer(userClickedPattern.length - 1);
             }
