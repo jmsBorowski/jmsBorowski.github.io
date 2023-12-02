@@ -5,6 +5,17 @@ let level = 0;
 let gameStarted = false;
 let userTurn = false; 
 
+let commentsArr = [
+    "to be calm is the highest achievement of the self", 
+    "find comfort in the chaos", 
+    "peace is always beautiful", 
+    "start today with a smile", 
+    "what are you thankful for today?", 
+    "quiet the mind and the soul will speak", 
+    "meditate. slow down. there is no rush.", 
+    "create your own kind of happy"
+    ]; 
+
 let audioOn = false; 
 const audio = document.querySelector("audio");
 const backgroundMusic = new Audio("sounds/backgroundMusic.mp3"); 
@@ -52,7 +63,7 @@ function nextSequence() {
     updateLevelTitle("Level " + level);
     
     // add color to game sequence 
-    const randomNumber = Math.floor(Math.random() * 4);
+    const randomNumber = Math.floor(Math.random() * 4); // random num 0-3 inclusive 
     const randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
 
@@ -63,6 +74,7 @@ function nextSequence() {
       setTimeout(() => {
         flashButton(currentColor);
       }, i * 2000); 
+      document.querySelector("p").textContent = Math.floor(Math.random() * commentsArr.length); 
     }
 
     setTimeout(() => {
