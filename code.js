@@ -54,6 +54,8 @@ document.getElementById("start-btn").addEventListener("click", function () {
 function restartGame() {
   document.querySelector("h1").textContent = "Restarting Game"; 
   
+  clearTimeouts();
+
   gameStarted = false; 
   gamePattern = [];
   userClickedPattern = [];
@@ -70,6 +72,14 @@ function restartGame() {
     nextSequence();
   }, 2000);
 }
+
+function clearTimeouts() {
+    // Iterate over all timeouts and clear them
+    let id = window.setTimeout(() => {}, 0);
+    while (id--) {
+      window.clearTimeout(id);
+    }
+  }
 
 function startGame() {
   gameStarted = true;
