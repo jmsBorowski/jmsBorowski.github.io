@@ -17,6 +17,13 @@ body {
     max-width: 400px;
     margin: 20px auto;
   }
+
+  #buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
   
   .button {
     width: 100%;
@@ -43,7 +50,8 @@ body {
   }
 
 #start-btn,
-#restart-btn {
+#restart-btn, 
+#audio-btn {
   width: 100px; /* Adjust the width as needed */
   height: auto; /* Adjust the height as needed */
   padding: 15px 30px;
@@ -53,7 +61,8 @@ body {
 }
 
 #start-btn:hover,
-#restart-btn:hover {
+#restart-btn:hover, 
+#audio-btn:hover {
     transform: scale(1.1);
 }
 
@@ -66,5 +75,3 @@ body {
   .flash {
     box-shadow: 0 0 10px 5px white; /* Example of a flashing effect; adjust as needed */
   }
-  
-  
