@@ -52,6 +52,8 @@ document.getElementById("start-btn").addEventListener("click", function () {
   });
 
 function restartGame() {
+  document.querySelector("h1").textContent = "Restarting Game"; 
+  
   gameStarted = false; 
   gamePattern = [];
   userClickedPattern = [];
