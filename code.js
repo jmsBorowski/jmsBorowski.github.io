@@ -8,6 +8,7 @@ let userTurn = false;
 let audioOn = false; 
 const audio = document.querySelector("audio");
 const backgroundMusic = new Audio("sounds/backgroundMusic.mp3"); 
+backgroundMusic.loop = true; 
 
 document.getElementById("audio-btn").addEventListener("click", function () {
     const audioButton = document.getElementById("audio-btn");
