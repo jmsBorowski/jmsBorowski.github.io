@@ -139,7 +139,7 @@ function playSound(soundFileName) {
     audioSound.play();
 }
 
-let gamePaused = false;
+/*let gamePaused = false;
 
 document.getElementById("info-btn").addEventListener("click", function () {
   if (!gamePaused) {
@@ -173,4 +173,4 @@ function pauseGame() {
 
 function resumeGame() {
 
-}
+}*/
