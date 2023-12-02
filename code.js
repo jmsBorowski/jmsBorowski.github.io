@@ -6,13 +6,14 @@ let gameStarted = false;
 let userTurn = false; 
 
 let audioOn = false; 
-const audio = document.querySelector("audio");
+const audio = document.getElementById("audio-btn");
 
 document.getElementById("audio-btn").addEventListener("click", function () {
     const audioButton = document.getElementById("audio-btn");
     
     if (audioOn == false) { // audio Off 
         audio.volume = 0; 
+        audio.play();
         audioOn = true; 
             
         audioButton.src = 'images/audioOff.png'; 
