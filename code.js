@@ -60,7 +60,7 @@ function nextSequence() {
       //playSound(currentColor);
       setTimeout(() => {
         flashButton(currentColor);
-      }, 1000); 
+      }, i * 1000); 
     }
     userTurn = true; 
   }
