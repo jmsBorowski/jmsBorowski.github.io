@@ -2,8 +2,10 @@ Go to the following link to experience the game:
 
 # jmsBorowski.github.io
 
-A relaxing, Simon Says inspired memory game. Simply press play and follow the highlighted pattern, which increases in difficulty every level! 
-This fresh take on a familiar classic adds creativity by including inspiring quotes on every level and creating an overall atmosphere of calm that will keep users playing everyday. 
+About: 
+
+Zen Garden Game is immersive and tranquil memory game, drawing inspiration from Simon Says. Embark on a journey of relaxation as you press play and gracefully navigate through progressively challenging patterns. Elevating the experience, each level in this fresh take on a familiar classic is adorned with uplifting quotes, infusing creativity and fostering a serene atmosphere that beckons users to engage daily.
+Immerse yourself in a seamless gaming experience with comprehensive sound control, play, and restart functionalities. Anticipating user needs, this game is designed to provide a soothing and enjoyable escape, making it the perfect daily companion for moments of mindfulness and mental agility.
 
 Credits: 
 
