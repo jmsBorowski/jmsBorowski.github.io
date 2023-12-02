@@ -150,6 +150,7 @@ document.getElementById("info-btn").addEventListener("click", function () {
     // Show overlay and panel
     document.getElementById("overlay").style.display = "block";
     document.getElementById("panel").style.display = "block";
+    document.getElementById("panel-content").style.display = "block";
   }
 });
 
@@ -162,11 +163,12 @@ document.getElementById("close-btn").addEventListener("click", function () {
     // Hide overlay and panel
     document.getElementById("overlay").style.display = "none";
     document.getElementById("panel").style.display = "none";
+    document.getElementById("panel-content").style.display = "none";
   }
 });
 
 function pauseGame() {
-    
+
 }
 
 function resumeGame() {
