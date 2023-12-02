@@ -1,10 +1,14 @@
+Go to the following link to experience the game: 
+
 # jmsBorowski.github.io
+
+A relaxing, Simon Says inspired memory game. Simply press play and follow the highlighted pattern, which increases in difficulty every level! 
+
+Credits: 
 
 All programming done by Jaiden Borowski 
 
 All art created and designed by Jaiden Borowski 
-
-
 
 Sounds from pixabay (creative commons): 
 
