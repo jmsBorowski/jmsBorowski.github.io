@@ -5,6 +5,12 @@ let level = 0;
 let gameStarted = false;
 let userTurn = false; 
 
+window.addEventListener("DOMContentLoaded", event => {
+    const audio = document.querySelector("audio");
+    audio.volume = 0.2;
+    audio.play();
+  }); 
+
 document.getElementById("start-btn").addEventListener("click", function () {
   if (!gameStarted) {
     startGame();
