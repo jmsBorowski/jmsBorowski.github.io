@@ -4,7 +4,7 @@ Go to the following link to experience the game:
 
 About: 
 
-Zen Garden Game is immersive and tranquil memory game, drawing inspiration from Simon Says. Embark on a journey of relaxation as you press play and gracefully navigate through progressively challenging patterns. Elevating the experience, each level in this fresh take on a familiar classic is adorned with uplifting quotes, infusing creativity and fostering a serene atmosphere that beckons users to engage daily.
+Zen Garden Game is an immersive and tranquil memory game, drawing inspiration from Simon Says. Embark on a journey of relaxation as you press play and gracefully navigate through progressively challenging patterns. Elevating the experience, each level in this fresh take on a familiar classic is adorned with uplifting quotes, infusing creativity and fostering a serene atmosphere that beckons users to engage daily.
 Immerse yourself in a seamless gaming experience with comprehensive sound control, play, and restart functionalities. Anticipating user needs, this game is designed to provide a soothing and enjoyable escape, making it the perfect daily companion for moments of mindfulness and mental agility.
 
 Credits: 
