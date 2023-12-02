@@ -60,13 +60,14 @@ function restartGame() {
   level = 0;
 
   const startButton = document.getElementById("start-btn");
-  startButton.src = "images/restart.png"; 
 
-  document.querySelector("p").textContent = "game restarted - see how long you can copy the highlighted pattern";
+  document.querySelector("p").textContent = "please wait";
   
   gameStarted = true;
 
   setTimeout(() => {
+    document.querySelector("p").textContent = "game restarted - see how long you can copy the highlighted pattern";
+    startButton.src = "images/restart.png"; 
     nextSequence();
   }, 2000);
 }
