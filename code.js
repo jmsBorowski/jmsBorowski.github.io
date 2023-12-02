@@ -127,12 +127,16 @@ function nextSequence() {
         const currentColor = gamePattern[i];
         setTimeout(() => {
             flashButton(currentColor);
+            setTimeout(() => {
+              if(i == gamePattern.length - 1) {
+                document.getElementById("overlay").style.visibility = "hidden";
+              }
+            }, 1500); 
         }, i * 2000);  
       }  
     }
 
     setTimeout(() => {
-        document.getElementById("overlay").style.visibility = "hidden";
         userTurn = true; 
     }, 1500); 
   }
@@ -186,6 +190,7 @@ function flashButton(color) {
 function checkAnswer(currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
     if (userClickedPattern.length === gamePattern.length) {
+        document.getElementById("overlay").style.visibility = "visible";
         setTimeout(() => {
         }, 1000); 
         setTimeout(() => {
