@@ -15,7 +15,6 @@ document.getElementById("audio-btn").addEventListener("click", function () {
     if (audioOn == false) { // audio Off 
         audio.volume = 0; 
         backgroundMusic.volume = 0; 
-        audio.play();
         backgroundMusic.play(); 
         audioOn = true; 
             
