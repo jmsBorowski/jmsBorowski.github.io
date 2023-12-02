@@ -58,6 +58,7 @@ function nextSequence() {
     for (let i = 0; i < gamePattern.length; i++) {
       const currentColor = gamePattern[i];
       //playSound(currentColor);
+      userTurn = false; 
       setTimeout(() => {
         flashButton(currentColor);
       }, i * 2000); 
@@ -69,15 +70,17 @@ function nextSequence() {
   }
 
 document.querySelectorAll(".button").forEach(function (button) {
+    if (userTurn) {
         button.addEventListener("click", function () {
             const userChosenColor = this.id;
-            if(gameStarted && userTurn) {
+            if(gameStarted) {
                 userClickedPattern.push(userChosenColor);
                 //playSound(userChosenColor);
                 flashButton(userChosenColor);
                 checkAnswer(userClickedPattern.length - 1);
             }
         });
+    }
 }); 
 
 function flashButton(color) {
