@@ -62,7 +62,10 @@ function nextSequence() {
         flashButton(currentColor);
       }, i * 1000); 
     }
-    userTurn = true; 
+
+    setTimeout(() => {
+        userTurn = true; 
+    }, 1500); 
   }
 
 document.querySelectorAll(".button").forEach(function (button) {
@@ -100,7 +103,7 @@ function flashButton(color) {
         setTimeout(() => {
             //button.style.backgroundColor = '';
             button.src = originalImage; 
-        }, 3000);
+        }, 1500);
     } else {
         console.error(`Element with ID '${color}' not found.`);
     } 
