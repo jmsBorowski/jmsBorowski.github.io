@@ -67,7 +67,7 @@ function flashButton(color) {
             button.src = 'images/rocks2.png'; 
         } else if (color == "pink") {
             button.src = 'images/petals2.png'; 
-        }
+        } 
 
         playSound(color);
         setTimeout(() => {
