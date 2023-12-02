@@ -95,10 +95,10 @@ body {
   }
   
   #panel {
-    display: none;
+    /*display: none;*/ 
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 100%;
+    left: 100%;
     background-image: url('images/panel.png');
     background-size: cover;
     background-position: center; 
@@ -106,9 +106,9 @@ body {
   }
 
   #panel-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    /*position: absolute;*/ 
+    top: 0;
+    left: 0;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white; /* Adjust text color */
@@ -121,7 +121,5 @@ body {
   #close-btn {
     padding: 10px 20px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
     border: none;
-    color: black; /* Adjust button text color */
   }
