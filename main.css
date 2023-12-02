@@ -51,7 +51,8 @@ body {
 
 #start-btn,
 #restart-btn, 
-#audio-btn {
+#audio-btn, 
+#info-btn {
   width: 100px; /* Adjust the width as needed */
   height: auto; /* Adjust the height as needed */
   padding: 15px 30px;
@@ -62,7 +63,8 @@ body {
 
 #start-btn:hover,
 #restart-btn:hover, 
-#audio-btn:hover {
+#audio-btn:hover, 
+#info-btn:hover {
     transform: scale(1.1);
 }
 
