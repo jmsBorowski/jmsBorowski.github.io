@@ -164,3 +164,11 @@ document.getElementById("close-btn").addEventListener("click", function () {
     document.getElementById("panel").style.display = "none";
   }
 });
+
+function pauseGame() {
+    
+}
+
+function resumeGame() {
+
+}
