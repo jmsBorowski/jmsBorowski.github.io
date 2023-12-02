@@ -91,12 +91,16 @@ function flashButton(color) {
 
         if (color == "orange") {
             button.src = 'images/fish2.png'; 
+            originalImage = 'images/fish1.png'; 
         } else if (color == "green") {
             button.src = 'images/grass2.png'; 
+            originalImage = 'images/grass1.png'; 
         } else if (color == "grey") {
             button.src = 'images/rocks2.png'; 
+            originalImage = 'images/rocks1.png'; 
         } else if (color == "pink") {
             button.src = 'images/petals2.png'; 
+            originalImage = 'images/petals1.png'; 
         } 
 
         playSound(color);
