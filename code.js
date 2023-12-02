@@ -6,16 +6,17 @@ let gameStarted = false;
 let userTurn = false; 
 
 let commentsArr = [
-    "to be calm is the highest achievement of the self", 
-    "find comfort in the chaos", 
-    "peace is always beautiful", 
-    "start today with a smile", 
-    "what are you thankful for today?", 
-    "quiet the mind and the soul will speak", 
-    "meditate. slow down. there is no rush.", 
-    "create your own kind of happy", 
-    "it's a good day to be happy", 
-    "enjoy the little things"
+    "\"to be calm is the highest achievement of the self\"", 
+    "\"find comfort in the chaos\"", 
+    "\"peace is always beautiful\"", 
+    "\"start today with a smile\"", 
+    "\"what are you thankful for today?\"", 
+    "\"quiet the mind and the soul will speak\"", 
+    "\"meditate. slow down. there is no rush.\"", 
+    "\"create your own kind of happy\"", 
+    "\"it's a good day to be happy\"", 
+    "\"enjoy the little things\"", 
+    "\"the best is yet to come\""
     ]; 
 
 let audioOn = false; 
@@ -146,7 +147,9 @@ function checkAnswer(currentLevel) {
   } else {
     playSound("wrong");
     updateLevelTitle("Game Over");
-    document.querySelector("p").textContent = "press the play button to restart the game";
+    document.querySelector("p").textContent = "your score was " + level + 
+                                              "\ngood job!" + 
+                                              "\npress the play button to play again";
     gameStarted = false; 
   }
 }
