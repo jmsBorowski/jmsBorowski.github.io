@@ -24,6 +24,8 @@ const audio = document.querySelector("audio");
 const backgroundMusic = new Audio("sounds/backgroundMusic.mp3"); 
 backgroundMusic.loop = true; 
 
+document.getElementById("overlay").style.visibility = "visible"; 
+
 document.getElementById("audio-btn").addEventListener("click", function () {
     const audioButton = document.getElementById("audio-btn");
     
@@ -115,7 +117,6 @@ function nextSequence() {
         document.querySelector("p").textContent = commentsArr[Math.floor(Math.random() * commentsArr.length)];
     } 
 
-    // add color to game sequence 
     const randomNumber = Math.floor(Math.random() * 4); // random num 0-3 inclusive 
     const randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
@@ -160,7 +161,6 @@ function flashButton(color) {
 
     if (button) {
         console.log(`Button with ID '${color}' found.`);
-        //button.style.backgroundColor = color;
 
         let originalImage = button.src; 
 
@@ -180,7 +180,6 @@ function flashButton(color) {
 
         playSound(color, 1);
         setTimeout(() => {
-            //button.style.backgroundColor = '';
             button.src = originalImage; 
         }, 1500); 
     } else {
@@ -220,6 +219,8 @@ function playSound(soundFileName, max) {
     audioSound.volume = audioOn ? max : 0; 
     audioSound.play();
 }
+
+/* Not implemented pop up panel for potential info button: */ 
 
 /*let gamePaused = false;
 
