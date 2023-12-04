@@ -9,7 +9,8 @@ body {
     background-color: #97e4f7;
     background-image: url('images/background3.png');
     background-size: cover; 
-    background-position: center;
+    background-position: center; 
+    cursor: url(images/cursor.png), auto; 
   }
   
   #game-container {
@@ -32,7 +33,7 @@ body {
   .button {
     width: 100%;
     height: auto;
-    cursor: pointer;
+    cursor: url(images/cursorHover.png), auto;
     font-family: 'Macondo', cursive;
     padding: 0; 
     margin: 0; 
@@ -59,7 +60,7 @@ body {
   width: 60px; 
   height: auto; 
   padding: 15px 10px;
-  cursor: pointer;
+  cursor: url(images/cursorHover.png), auto;
   margin-top: 20px;
   font-family: 'Macondo', cursive;
   margin-top: 0px;
@@ -110,11 +111,11 @@ body {
   }
   
   #panel button {
-    cursor: pointer;
+    cursor: url(images/cursorHover.png), auto;
   }
   
   #close-btn {
     padding: 10px 20px;
-    cursor: pointer;
+    cursor: url(images/cursorHover.png), auto;
     border: none;
   }
