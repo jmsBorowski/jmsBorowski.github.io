@@ -30,7 +30,7 @@ document.getElementById("audio-btn").addEventListener("click", function () {
     const audioButton = document.getElementById("audio-btn");
     
     if (audioOn == false) { // if audio is Off, turn audio on 
-        backgroundMusic.volume = .9; 
+        backgroundMusic.volume = 0.1; 
         backgroundMusic.play(); 
         audioOn = true; 
             
@@ -167,7 +167,7 @@ function flashButton(color) {
         if (color == "orange") {
             button.src = 'images/fish2.png'; 
             originalImage = 'images/fish1.png'; 
-            playSound(color, .8);
+            playSound(color, .2);
         } else if (color == "green") {
             button.src = 'images/grass2.png'; 
             originalImage = 'images/grass1.png'; 
@@ -175,11 +175,11 @@ function flashButton(color) {
         } else if (color == "grey") {
             button.src = 'images/rocks2.png'; 
             originalImage = 'images/rocks1.png'; 
-            playSound(color, .8);
+            playSound(color, .2);
         } else if (color == "pink") {
             button.src = 'images/petals2.png'; 
             originalImage = 'images/petals1.png'; 
-            playSound(color, .8);
+            playSound(color, .2);
         } 
 
         setTimeout(() => {
@@ -201,7 +201,7 @@ function checkAnswer(currentLevel) {
       }, 2000);
     }
   } else {
-    playSound("wrong", 0.5);
+    playSound("wrong", 0.2);
     document.getElementById("overlay").style.visibility = "visible";
     updateLevelTitle("Game Over");
     document.querySelector("p").textContent = "your score was " + level + 
