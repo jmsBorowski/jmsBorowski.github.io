@@ -167,18 +167,21 @@ function flashButton(color) {
         if (color == "orange") {
             button.src = 'images/fish2.png'; 
             originalImage = 'images/fish1.png'; 
+            playSound(color, .8);
         } else if (color == "green") {
             button.src = 'images/grass2.png'; 
             originalImage = 'images/grass1.png'; 
+            playSound(color, 1);
         } else if (color == "grey") {
             button.src = 'images/rocks2.png'; 
             originalImage = 'images/rocks1.png'; 
+            playSound(color, .8);
         } else if (color == "pink") {
             button.src = 'images/petals2.png'; 
             originalImage = 'images/petals1.png'; 
+            playSound(color, .8);
         } 
 
-        playSound(color, 1);
         setTimeout(() => {
             button.src = originalImage; 
         }, 1500); 
@@ -198,7 +201,8 @@ function checkAnswer(currentLevel) {
       }, 2000);
     }
   } else {
-    playSound("wrong", 0.7);
+    playSound("wrong", 0.5);
+    document.getElementById("overlay").style.visibility = "visible";
     updateLevelTitle("Game Over");
     document.querySelector("p").textContent = "your score was " + level + 
                                               "\ngood job!" + 
